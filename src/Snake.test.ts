@@ -1,4 +1,5 @@
 import Snake from "./Snake";
+import display from "./display";
 /*
 const moveSnakes = (times: number, turn: boolean = false) => {
   const greenSnake = new Snake();
@@ -65,15 +66,28 @@ describe("Addition", function () {
 export {};
 */
 
-describe("Snake", () => {
-  let snake = new Snake();
+describe("Snake Tests", () => {
+  let snake: Snake;
 
   beforeEach(() => {
     snake = new Snake();
   });
 
   it("starts with the correct position of 0", () => {
+    snake.move(1);
     expect(snake.position.x).toBe(0);
+    expect(snake.position.y).toBe(1);
+  });
+  it("The snake moves once.", () => {
+    snake.move(1);
+    expect(snake.position.x).toBe(0);
+    expect(snake.position.y).toBe(1);
+  });
+  it("The snake turns right and moves.", () => {
+    snake.turnRight();
+    snake.move(1);
+    expect(snake.position.x).toBe(1);
     expect(snake.position.y).toBe(0);
   });
 });
+export {};

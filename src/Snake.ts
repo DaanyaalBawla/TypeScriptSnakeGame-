@@ -13,7 +13,7 @@ class Snake {
   }
 
   move(move: number) {
-    display("The snake is moving", move, "times");
+    console.log("The snake is moving", move, "times");
     if (this.currentDirection === 1) {
       this.currentPosition = new Point(
         this.currentPosition.x,
@@ -48,7 +48,7 @@ class Snake {
     }
   }
   turnLeft() {
-    display("The snake is turning");
+    console.log("The snake is turning");
     if (this.currentDirection === -1) {
       this.currentDirection = -2;
     } else if (this.currentDirection === 1) {
@@ -60,7 +60,7 @@ class Snake {
     }
   }
   turnRight() {
-    display("The snake is turning");
+    console.log("The snake is turning");
     if (this.currentDirection === -1) {
       this.currentDirection = 2;
     } else if (this.currentDirection === 1) {
