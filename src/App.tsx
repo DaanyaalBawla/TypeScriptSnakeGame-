@@ -11,13 +11,13 @@ export default function App() {
     document.getElementById("output")!.innerText = "OUTPUT:\n";
     display("hey");
     const snake1 = new Snake();
-    snake1.move(10);
-    snake1.turn(-1);
     snake1.move(1);
-    snake1.move(10);
-    snake1.turn(1);
-    snake1.move(20);
-    display("Snake's current position is", snake1.position);
+    snake1.turnRight();
+    snake1.move(1);
+    snake1.turnLeft();
+    snake1.move(1);
+    const currentspace = snake1.position.x + "," + snake1.position.y;
+    display("Snake's current position is", currentspace);
   }, []);
   return (
     <div className="App">
