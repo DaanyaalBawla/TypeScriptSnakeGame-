@@ -74,14 +74,14 @@ describe("Snake Tests", () => {
   });
 
   it("starts with the correct position of 0", () => {
-    snake.move(1);
     expect(snake.position.x).toBe(0);
-    expect(snake.position.y).toBe(1);
+    expect(snake.position.y).toBe(0);
   });
-  it("The snake moves once.", () => {
-    snake.move(1);
+  it("The snake moves a random amount.", () => {
+    const rannum = Math.floor(Math.random() * 10);
+    snake.move(rannum);
     expect(snake.position.x).toBe(0);
-    expect(snake.position.y).toBe(1);
+    expect(snake.position.y).toBe(rannum);
   });
   it("The snake turns right and moves.", () => {
     snake.turnRight();
