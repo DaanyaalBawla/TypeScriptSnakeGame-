@@ -1,5 +1,6 @@
 import Snake from "./Snake";
 import display from "./display";
+import SnakeController from "./snakecontrol";
 /*
 const moveSnakes = (times: number, turn: boolean = false) => {
   const greenSnake = new Snake();
@@ -88,6 +89,11 @@ describe("Snake Tests", () => {
     snake.move(1);
     expect(snake.position.x).toBe(1);
     expect(snake.position.y).toBe(0);
+  });
+  it("testing controller", () => {
+    const controller = new SnakeController();
+    controller.turnSnakeLeft();
+    expect(controller.snakePosition).toBe(0);
   });
 });
 export {};

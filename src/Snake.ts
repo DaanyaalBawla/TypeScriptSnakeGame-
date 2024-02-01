@@ -75,6 +75,9 @@ class Snake {
   public get position() {
     return this.currentPosition;
   }
+  public get direction() {
+    return this.currentDirection;
+  }
 }
 class Point {
   public xcoord: number;
@@ -91,3 +94,5 @@ class Point {
   }
 }
 export default Snake;
+
+// compass: N = 1, E = -2, S = -1, W = 2

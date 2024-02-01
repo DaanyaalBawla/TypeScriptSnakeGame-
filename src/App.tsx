@@ -11,11 +11,12 @@ export default function App() {
     document.getElementById("output")!.innerText = "OUTPUT:\n";
     display("hey");
     const snake1 = new Snake();
-    snake1.move(1);
     snake1.turnRight();
     snake1.move(1);
-    snake1.turnLeft();
-    snake1.move(1);
+    //snake1.turnRight();
+    //snake1.move(1);
+    //snake1.turnLeft();
+    //snake1.move(1);
     const currentspace = snake1.position.x + "," + snake1.position.y;
     display("Snake's current position is", currentspace);
   }, []);
