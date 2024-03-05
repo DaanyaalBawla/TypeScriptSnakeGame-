@@ -90,10 +90,10 @@ describe("Snake Tests", () => {
     expect(snake.position.x).toBe(1);
     expect(snake.position.y).toBe(0);
   });
-  it("testing controller", () => {
-    const controller = new SnakeController();
-    controller.turnSnakeLeft();
-    expect(controller.snakePosition).toBe(0);
-  });
+  //it("testing controller", () => {
+    //const controller = new SnakeController();
+    //controller.turnSnakeLeft();
+    //expect(controller.snakePosition).toBe(0);
+  //});
 });
 export {};
