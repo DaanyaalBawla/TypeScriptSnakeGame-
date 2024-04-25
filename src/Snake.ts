@@ -80,8 +80,8 @@ class Snake {
   }
 }
 class Point {
-  public xcoord: number;
-  public ycoord: number;
+  private xcoord: number;
+  private ycoord: number;
   constructor(x: number, y: number) {
     this.xcoord = x;
     this.ycoord = y;

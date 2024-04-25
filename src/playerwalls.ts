@@ -4,7 +4,7 @@ class AvoidWallsPlayer extends player {
   constructor(snakeController: SnakeController) {
     super(snakeController);
   }
-  moveTurn(): void {
+  makeTurn(): any {
     if (
       this.sc.snakeDirection === -1 &&
       this.sc.snakePosition.x <= this.sc.worldWidth / 2 &&

@@ -1,8 +1,7 @@
-import snake from "./Snake"
 interface IInputHandler {
-
-madeLeftMove() {
-    
+madeLeftMove(): boolean;
+madeRightMove(): boolean;
+resetLeftMove(): void;
+resetRightMove(): void;
 }
-}
-export default IInputHandler
+export default IInputHandler;

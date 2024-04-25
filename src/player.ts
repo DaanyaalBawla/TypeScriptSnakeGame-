@@ -5,6 +5,6 @@ abstract class player {
   constructor(SnakeController: SnakeController) {
     this.sc = SnakeController;
   }
-  abstract moveTurn(): void;
+  abstract makeTurn(): any;
 }
 export default player;

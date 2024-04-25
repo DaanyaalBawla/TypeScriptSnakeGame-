@@ -1,5 +1,5 @@
 import WorldModel from "./worldmodel";
 interface IWorldView {
-    display(worldmodel: WorldModel): void;
+    display(worldModel: WorldModel): void;
 }
 export default IWorldView;
