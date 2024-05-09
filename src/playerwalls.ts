@@ -8,54 +8,53 @@ class AvoidWallsPlayer extends player {
     if (
       this.sc.snakeDirection === -1 &&
       this.sc.snakePosition.x <= this.sc.worldWidth / 2 &&
-      this.sc.snakePosition.y == this.sc.worldHeight-1
+      this.sc.snakePosition.y === this.sc.worldHeight-1
     ) {
       this.sc.turnSnakeLeft();
     }
     else if (
       this.sc.snakeDirection === -1 &&
-      this.sc.snakePosition.y == this.sc.worldHeight-1 
+      this.sc.snakePosition.y === this.sc.worldHeight-1 
     ) {
       this.sc.turnSnakeRight()
     }
     else if (
       this.sc.snakeDirection === 1 &&
-      this.sc.snakePosition.x <= this.sc.worldWidth  &&
-      this.sc.snakePosition.y == this.sc.worldHeight-1
+      this.sc.snakePosition.x <= this.sc.worldWidth / 2   &&
+      this.sc.snakePosition.y == 0
       ) {
         this.sc.turnSnakeRight()
       }
       else if (
-        this.sc.snakeDirection === 1 &&
-        this.sc.snakePosition.y == this.sc.worldHeight-1
+        this.sc.snakeDirection === 1 && this.sc.snakePosition.y == 0
         ) {
           this.sc.turnSnakeLeft()
         }
       else if (
         this.sc.snakeDirection === -2 &&
-        this.sc.snakePosition.x == this.sc.worldWidth-1  &&
+        this.sc.snakePosition.x === this.sc.worldWidth-1  &&
         this.sc.snakePosition.y <= this.sc.worldHeight / 2
         ) {
-        this.sc.turnSnakeLeft()
+        this.sc.turnSnakeRight()
        }
       else if (
       this.sc.snakeDirection === -2 &&
-      this.sc.snakePosition.x == this.sc.worldWidth-1 
+      this.sc.snakePosition.x === this.sc.worldWidth-1 
       ) {
-        this.sc.turnSnakeRight()
+        this.sc.turnSnakeLeft()
        } 
       else if (
         this.sc.snakeDirection === 2 &&
-        this.sc.snakePosition.x == this.sc.worldWidth-1 &&
+        this.sc.snakePosition.x === 0 &&
         this.sc.snakePosition.y <= this.sc.worldHeight / 2
       ) {
-        this.sc.turnSnakeRight()
+        this.sc.turnSnakeLeft()
       }
       else if (
         this.sc.snakeDirection === 2 &&
-        this.sc.snakePosition.x == this.sc.worldWidth-1
+        this.sc.snakePosition.x === 0
       ) {
-        this.sc.turnSnakeLeft()
+        this.sc.turnSnakeRight()
       }
   }
 }

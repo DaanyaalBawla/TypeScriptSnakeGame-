@@ -4,9 +4,9 @@ import WorldModel from "./worldmodel";
 class SnakeController {
   private snakeWorld: WorldModel;
   private slitherer: Snake;
-  constructor(w:WorldModel) {
+  constructor(w:WorldModel, s:Snake) {
     //this.snakeWorld = new WorldModel(new Snake(), 0, 0);
-    this.slitherer = new Snake();
+    this.slitherer = s
     this.snakeWorld = w
   }
   turnSnakeLeft() {

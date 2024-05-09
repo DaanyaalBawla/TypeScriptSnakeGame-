@@ -1,7 +1,10 @@
 import display from "./display";
 
 // place your code on line 5 above the export statement below
-
+/*
+* Direction is whether it's backwards or forwards. 1=forwards, -1=backwards, later changed to 4 directions
+* Position is the point on a coorodinate plane. Uses Point class
+*/
 class Snake {
   private currentPosition: Point;
   private currentDirection: number;
@@ -17,12 +20,12 @@ class Snake {
     if (this.currentDirection === 1) {
       this.currentPosition = new Point(
         this.currentPosition.x,
-        this.currentPosition.y + move,
+        this.currentPosition.y - move,
       );
     } else if (this.currentDirection === -1) {
       this.currentPosition = new Point(
         this.currentPosition.x,
-        this.currentPosition.y - move,
+        this.currentPosition.y + move,
       );
     } else if (this.currentDirection === 2) {
       this.currentPosition = new Point(
@@ -47,6 +50,9 @@ class Snake {
       this.currentDirection = -1;
     }
   }
+
+  // compass: up = 1, right = -2, down = -1, left = 2 
+
   turnLeft() {
     console.log("The snake is turning");
     if (this.currentDirection === -1) {

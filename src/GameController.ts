@@ -1,37 +1,40 @@
 import player from "./player";
 import WorldModel from "./worldmodel";
-import HumanPlayer from "./HumanPlayer";
-import exp from "constants";
+//import HumanPlayer from "./HumanPlayer";
+//import exp from "constants";
 class GameController {
-    protected _world: WorldModel
+    private _world: WorldModel;
     private _player1: player;
     private _player2: player;
+
     constructor(W: WorldModel, p: player) {
-         this._world = W
-         this._player1 = p
-         this._player2 = p
+        this._world = W
+        this._player1 = p
+        this._player2 = p
     }
-   // public set player1() {
-   //     this._player1
-    //}
-    //public set player2() {
-    //    this._player2
-   // }
+    
+    set player1(p: player) {
+        this._player1 = p;
+    }
+    set player2(p: player){
+        this._player2 = p;
+
+    }
     run() {
-       const lasttime = 0
-    }
-    updateframe() {
+       let lasttime = 0
+       const updateframe = (miliseconds: number) => {
+        if ( 
+            miliseconds - lasttime > 150
+                )
+        {
         this._player1.makeTurn()
         this._player2.makeTurn()
-        if ( 
-            Date.now() > 250
-        
-        )
-        {
-        this._world.update
-        
+        this._world.update(1)
+        lasttime = lasttime + 150 
         }
-        requestAnimationFrame(this.run)
-    }
+        requestAnimationFrame(updateframe)
+    };
+    requestAnimationFrame(updateframe)
+}
 }
 export default GameController

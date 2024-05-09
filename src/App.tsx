@@ -1,11 +1,19 @@
 import "./App.css";
-import "./App.css";
 import Snake from "./Snake";
 import display from "./display";
 import { useEffect } from "react";
 import WorldModel from "./worldmodel";
 import CanvasWorldView from "./canvasworldview"
 import "./index.css"
+import GameController from "./GameController";
+import HumanPlayer from "./HumanPlayer";
+import player from "./player";
+import AvoidWallsPlayer from "./playerwalls";
+import SnakeController from "./snakecontrol";
+import LRKeyInputHandler from "./LRKeyInputHandler";
+import { SignatureKind } from "typescript";
+import { start } from "repl";
+
 
 export default function App() {
   // Add Snake Tests with display below
@@ -24,9 +32,15 @@ export default function App() {
     display("Snake's current position is", currentspace);
     const WorldModel_ = new WorldModel(snake1, 30,30);
     const CanvasWorldView_ = new CanvasWorldView(5)
+    const snakecontroller = new SnakeController(WorldModel_, snake1)
+    const playerAI = new AvoidWallsPlayer(snakecontroller)
+    const human = new HumanPlayer(snakecontroller, new LRKeyInputHandler) 
+    const startgame = new GameController(WorldModel_,human)
+    startgame.player2 = playerAI
+    startgame.player1 = human
     WorldModel_.WorldView = CanvasWorldView_
     WorldModel_.update(1)
-
+    startgame.run()
   }, []);
   return (
     <div className="App">
