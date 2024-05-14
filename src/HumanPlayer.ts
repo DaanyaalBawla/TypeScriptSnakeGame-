@@ -29,5 +29,5 @@ class HumanPlayer extends Player {
 export default HumanPlayer;
 /**
  * Here is where we connect snakecontroller and inputhandler. using made_move to see what arrow was pressed then correlating that to the snake moving right or left
- * we use sc because like how in refers to iiinputhandler, sc refers to snakecontroller, this was established in the abstract player class. 
+ * we use sc because like how in refers to iinputhandler, sc refers to snakecontroller, this was established in the abstract player class. 
  */

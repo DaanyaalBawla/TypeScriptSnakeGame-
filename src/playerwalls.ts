@@ -59,4 +59,9 @@ class AvoidWallsPlayer extends player {
   }
 }
 export default AvoidWallsPlayer;
-// compass: N = 1, E = -2, S = -1, W = 2
+/*
+* Whenever a snake hits a certain postion on the world this will force them to turn so they stay in the canvas.
+* Use direction, x for where they are on the x plane, and y to see where they are on the y plane. 
+* *They could at any of the 4 sides then we have to see if they're on the top or bottom or left or right sides to decide the direction
+*/
+// compass: up = 1, right = -2, down = -1, left = 2 
