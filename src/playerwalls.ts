@@ -1,9 +1,9 @@
 import player from "./player";
 import SnakeController from "./snakecontrol";
 class AvoidWallsPlayer extends player {
-  constructor(snakeController: SnakeController) {
-    super(snakeController);
-  }
+  //constructor(snakeController: SnakeController) {
+    //super(snakeController);
+  //}
   makeTurn(): any {
     if (
       this.sc.snakeDirection === -1 &&
