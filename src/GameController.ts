@@ -35,6 +35,9 @@ class GameController {
         requestAnimationFrame(updateframe)
     };
     requestAnimationFrame(updateframe)
+/*
+* run: actually runs game, updates every 150 miliseconds, constantly calls requestAnimationFrame
+*/
 }
 }
 export default GameController
