@@ -20,7 +20,7 @@ export default function App() {
   useEffect(() => {
     // Include your display statements to test below
     document.getElementById("output")!.innerText = "OUTPUT:\n";
-    display("hey");
+    display("This area was used at the start to test the snake's movement on a coodinate plane.");
     const snake1 = new Snake();
     snake1.turnRight();
     snake1.move(1);
@@ -44,8 +44,8 @@ export default function App() {
   }, []);
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Snake Game</h1>
+      <h2>Project by Daanyaal Bawla</h2>
       <pre id="output">
        OUTPUT: <br />
       </pre>
